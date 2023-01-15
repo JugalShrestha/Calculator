@@ -1,0 +1,157 @@
+:root{
+    --p2-color: #025159;
+    --p1-color: #012E40;
+    --s1-color: #03A696;
+    --s2-color: #F28705;
+    --text-color:white;
+    --text:sans-serif;
+    --shadow: black;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+//Start of body
+body{
+    width: 100%;
+    height: 100vh;
+    //Start of .everything
+    .everything{
+        width: 100%;
+        height: 100%;
+        background: var(--text-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        //Start of .calculator-whole
+        .calculator-whole{
+            transition: .2s ease-in-out;
+            width: 40vh;
+            height: max-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            padding: 0vh;
+            gap:0vh;
+            background: var(--s1-color);
+            box-shadow: 1vh 1vh 1vh var(--s1-color);
+            overflow: hidden;
+            &:hover{
+                box-shadow: 1vh 1vh 1vh var(--s2-color);
+            }
+
+            //Start of display part
+            .display-part{
+                width: 100%;
+                height: 15vh;
+                padding: 1vh;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: flex-start;
+                background: var(--p1-color);
+                //box-shadow: inset 0 0 3vh var(--shadow);
+                //Start of previous result
+                .previous-result{
+                    position: relative;
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                    padding: 0 2vh;
+                    font-size: 2vh;
+                    font-family: var(--text);
+                    color:var(--text-color);
+                    opacity: 50%;
+                }
+                //End of previous result
+                //Start of present result
+                .present-result{
+                    position: relative;
+                    width: 100%;
+                    height:50%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    justify-content: flex-start;
+                    padding: 0 2vh;
+                    font-size: 4vh;
+                    font-family: var(--text);
+                    color:var(--text-color);
+                 
+                }
+                //End of present result
+            }
+            //End of display part
+
+            //Start of button part
+            .button-part{
+                width: 100%;
+                height: 60%;
+                background: var(--p2-color);
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                //Start of buttons
+                .buttons{
+                    cursor: pointer;
+                    transition: .2 ease-in-out;
+                    width: 25%;
+                    padding: 2vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 2vh;
+                    font-weight: bold;
+                    font-family: var(--text);
+                    border:.1vh solid var(--p1-color);
+                    color:var(--text-color);
+                    background: var(--p2-color);
+                    &:hover{
+                        background: var(--p1-color);
+                    }
+                }
+                //End of buttons
+                //Start of %
+                :nth-child(2)
+                {
+                    font-size: 2vh;
+                }
+                //ENd of %
+                //Start of AC
+                :nth-child(3){
+                    width:50%;
+                    background: var(--s2-color);
+                    &:hover{
+                        color:var(--s2-color);
+                        background: var(--text-color);
+                    }
+                }
+                //End of AC
+                //Start of =
+                :nth-last-child(1)
+                {
+                    background: var(--s2-color);
+                    &:hover{
+                        color:var(--s2-color);
+                        background: var(--text-color);
+                    }
+                }
+                //End of =
+            }
+            //End of button part 
+        }
+        //End of .calculator-whole
+    }
+    //End of .everything
+}
+//End of body

@@ -1,0 +1,130 @@
+:root {
+  --p2-color: #025159;
+  --p1-color: #012E40;
+  --s1-color: #03A696;
+  --s2-color: #F28705;
+  --text-color:white;
+  --text:sans-serif;
+  --shadow: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+body .everything {
+  width: 100%;
+  height: 100%;
+  background: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .everything .calculator-whole {
+  transition: 0.2s ease-in-out;
+  width: 40vh;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 0vh;
+  gap: 0vh;
+  background: var(--s1-color);
+  box-shadow: 1vh 1vh 1vh var(--s1-color);
+  overflow: hidden;
+}
+body .everything .calculator-whole:hover {
+  box-shadow: 1vh 1vh 1vh var(--s2-color);
+}
+body .everything .calculator-whole .display-part {
+  width: 100%;
+  height: 15vh;
+  padding: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background: var(--p1-color);
+}
+body .everything .calculator-whole .display-part .previous-result {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 2vh;
+  font-size: 2vh;
+  font-family: var(--text);
+  color: var(--text-color);
+  opacity: 50%;
+}
+body .everything .calculator-whole .display-part .present-result {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 2vh;
+  font-size: 4vh;
+  font-family: var(--text);
+  color: var(--text-color);
+}
+body .everything .calculator-whole .button-part {
+  width: 100%;
+  height: 60%;
+  background: var(--p2-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body .everything .calculator-whole .button-part .buttons {
+  cursor: pointer;
+  transition: 0.2 ease-in-out;
+  width: 25%;
+  padding: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vh;
+  font-weight: bold;
+  font-family: var(--text);
+  border: 0.1vh solid var(--p1-color);
+  color: var(--text-color);
+  background: var(--p2-color);
+}
+body .everything .calculator-whole .button-part .buttons:hover {
+  background: var(--p1-color);
+}
+body .everything .calculator-whole .button-part :nth-child(2) {
+  font-size: 2vh;
+}
+body .everything .calculator-whole .button-part :nth-child(3) {
+  width: 50%;
+  background: var(--s2-color);
+}
+body .everything .calculator-whole .button-part :nth-child(3):hover {
+  color: var(--s2-color);
+  background: var(--text-color);
+}
+body .everything .calculator-whole .button-part :nth-last-child(1) {
+  background: var(--s2-color);
+}
+body .everything .calculator-whole .button-part :nth-last-child(1):hover {
+  color: var(--s2-color);
+  background: var(--text-color);
+}/*# sourceMappingURL=style.css.map */

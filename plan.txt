@@ -1,0 +1,26 @@
+Making a calculator
+Has: 
+    -Display section
+        -Present calculations
+        -Previous section result
+    -Buttons section
+        -Has 1,2,3
+            4,5,6
+            7,8,9
+            0
+        -Has +,-,*,/,%
+        -Has =
+        -Has del,clr
+
+Structure-Inside-calculator-Display:
+        234
+    -     4
+    --------
+        230
+
+Structure-Inside-calculator-Buttons:
+    D %   C 
+    1 2 3 -
+    4 5 6 *
+    7 8 9 +
+    / 0 . =
