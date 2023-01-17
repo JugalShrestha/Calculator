@@ -86,37 +86,8 @@ numberBtns.forEach((button)=>{
 
 dotBtn.addEventListener('click',()=>{
     text = dotBtn.innerHTML
-    length = eqn.length
-    var dotChecker = 0
-    if(eqn.includes('.'))
-    {
-        dotChecker++
-    }
-    else if(equalsToClickChecker==1)
-    {
-        eqn = ""
-        result = ""
-        text = dotBtn.innerHTML
-        eqn=eqn+text
-        result = eval(prevEqn)
-        previous.innerHTML = result
-        current.innerHTML = eqn
-        equalsToClickChecker=0
-    }
-    else if(dotChecker==0)
-    {
-        eqn= eqn+ text
-        current.innerHTML= eqn
-    }
-    else if(isNaN(eqn[length]))
-    { 
-        eqn= eqn+ text
-        current.innerHTML= eqn
-    }
-    else
-    {
-        return
-    } 
+    eqn= eqn+text
+    current.innerHTML = eqn
 })
 
 operatorBtns.forEach((button)=>{
@@ -187,12 +158,19 @@ deleteBtn.addEventListener('click',()=>{
 })
 
 equalsToBtn.addEventListener('click',()=>{
-    equalsToClickChecker = 1
-    prevEqn = eqn
-    result = eval(prevEqn)
-    text= current.innerHTML
-    length = text.length
 
+    try{
+        equalsToClickChecker = 1
+        prevEqn = eqn
+        result = eval(prevEqn)
+        text= current.innerHTML
+        length = text.length
+    }
+    catch(Exception)
+    {
+        current.innerHTML = 'error'
+    }
+  
     //If equals to is pressed when eqn is null
     if(eqn=="")
     {
@@ -206,7 +184,6 @@ equalsToBtn.addEventListener('click',()=>{
     //if +- is the last digit
     else if(isNaN(eqn[length-1]))
     {
-        console.log(eqn[length-1])
         return
     }
 

@@ -23,6 +23,7 @@ body .everything {
   height: 100%;
   background: var(--text-color);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -40,11 +41,7 @@ body .everything .calculator-whole {
   padding: 0vh;
   gap: 0vh;
   background: var(--s1-color);
-  box-shadow: 1vh 1vh 1vh var(--s1-color);
   overflow: hidden;
-}
-body .everything .calculator-whole:hover {
-  box-shadow: 1vh 1vh 1vh var(--s2-color);
 }
 body .everything .calculator-whole .display-part {
   width: 100%;
@@ -65,7 +62,7 @@ body .everything .calculator-whole .display-part .previous-result {
   align-items: flex-end;
   justify-content: flex-end;
   padding: 0 2vh;
-  font-size: 2vh;
+  font-size: 3vh;
   font-family: var(--text);
   color: var(--text-color);
   opacity: 50%;
@@ -85,22 +82,23 @@ body .everything .calculator-whole .display-part .present-result {
 }
 body .everything .calculator-whole .button-part {
   width: 100%;
-  height: 60%;
   background: var(--p2-color);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding: 1vh;
+  gap: 1vh;
 }
 body .everything .calculator-whole .button-part .buttons {
   cursor: pointer;
   transition: 0.2 ease-in-out;
-  width: 25%;
+  width: 22%;
   padding: 2vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2vh;
+  font-size: 3vh;
   font-weight: bold;
   font-family: var(--text);
   border: 0.1vh solid var(--p1-color);
@@ -110,11 +108,8 @@ body .everything .calculator-whole .button-part .buttons {
 body .everything .calculator-whole .button-part .buttons:hover {
   background: var(--p1-color);
 }
-body .everything .calculator-whole .button-part :nth-child(2) {
-  font-size: 2vh;
-}
 body .everything .calculator-whole .button-part :nth-child(3) {
-  width: 50%;
+  width: 47%;
   background: var(--s2-color);
 }
 body .everything .calculator-whole .button-part :nth-child(3):hover {
