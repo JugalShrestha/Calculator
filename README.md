@@ -1,5 +1,5 @@
 # Calculator
 A calculator to do basic maths
 
-# Demo link
+### Demo link
 https://jugalshrestha.github.io/Calculator/
